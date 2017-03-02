@@ -5,7 +5,8 @@ local output = ""
 for l in file:lines() do 
 	if l:find("%-%-") then
 		print("find title")
-		newfile:write(output .."\n")  
+		newfile:write(output .."\n")
+		output = ""  
 		newfile:write(l)
 	else
 		if l:find("%s+") then
